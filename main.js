@@ -137,7 +137,7 @@ function validInput(){
 
 
     
-    if ( nameInput.value===""|| priceInput.value===""||  categoryInput.value===""||descInput.value===""||searchInput.value===""
+    if ( nameInput.value===""|| priceInput.value===""||  categoryInput.value===""||descInput.value===""
     ){
     
     return false;
