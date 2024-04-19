@@ -70,6 +70,8 @@ function deleteProduct(index){
     localStorage.setItem("list",JSON.stringify(productList))
 displayData()
 clearForm()
+document.getElementById("btn-add").style.display = "inline-block"
+document.getElementById("btn-edit").style.display = "none"
 }
 
 function updateProduct(x){
@@ -83,6 +85,7 @@ index=x;
 }
 
 function addUpdate(){
+    if(validInput()===true){
 
  
         var product ={
@@ -101,7 +104,9 @@ function addUpdate(){
             clearForm()
             document.getElementById("btn-add").style.display = "inline-block"
             document.getElementById("btn-edit").style.display = "none"
-
+        }else{
+            window.alert("Inputs Required");
+        }
 }
 
 
@@ -137,17 +142,11 @@ function validInput(){
 
 
     
-    if ( nameInput.value===""|| priceInput.value===""||  categoryInput.value===""||descInput.value===""
-    ){
-    
+    if (nameInput.value===""|| priceInput.value===""||  categoryInput.value===""||descInput.value===""  ){
     return false;
-    
-    }
-    else{
+    } else{
         return true ;
-    }
-    
-    }
+    } }
 
 
 
